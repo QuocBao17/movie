@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navigation from './Components/Navigation/Navigation';
 import RLink from './Routes/Routes';
 import Movies from './Components/Pages/Home/Movies/Movies';
@@ -10,14 +10,14 @@ function App() {
     setStatus(status);
   }
     return (  
-     <HashRouter basename='/movie'>
+     <BrowserRouter basename='/movie'>
       <div className='main-project'>
          <div className='container'>
           <Navigation status={status} reciveStatus={getStatus}></Navigation>
           <RLink status={status} reciveStatus={getStatus}></RLink>
         </div>
       </div>
-      </HashRouter>
+      </BrowserRouter>
     );
 }
 
