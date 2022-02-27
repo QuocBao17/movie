@@ -10,7 +10,7 @@ function App() {
     setStatus(status);
   }
     return (  
-     <BrowserRouter basename='/movie'>
+     <BrowserRouter>
       <div className='main-project'>
          <div className='container'>
           <Navigation status={status} reciveStatus={getStatus}></Navigation>
