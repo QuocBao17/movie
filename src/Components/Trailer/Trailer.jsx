@@ -2,6 +2,7 @@ import "./trailer.scss";
 import { useState, useEffect } from "react";
 import tmdbApi from "../../Api/tmbdApi";
 const Trailer = (props) => {
+
   var cate = props.cate;
   var id = props.id;
   var status = props.status;
@@ -12,7 +13,7 @@ const Trailer = (props) => {
       setVideo(response.results);
     };
     getItem();
-  }, []);
+  }, [id]);
   if (video.length > 0) {
     var trailer = "https://www.youtube.com/embed/" + video[0].key;
     var text = "";

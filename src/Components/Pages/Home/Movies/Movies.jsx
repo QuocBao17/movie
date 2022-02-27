@@ -77,8 +77,8 @@ const Movies = (props) => {
             className={`movies__container__right__search ${
               status ? "active-search" : "noactive-search"
             }`}
-            ref={myRef}
-          >
+          
+          > 
             <input
               type="text"
               placeholder="Search"
@@ -87,7 +87,7 @@ const Movies = (props) => {
                 setKeyword(e.target.value);
               }}
             />
-            <i className="fas fa-search" onClick={goToSearch}></i>
+            <i   ref={myRef} className="fas fa-search" onClick={goToSearch}></i>
             <PopupSearch item={items} cate="movie"></PopupSearch>
           </div>
           <div className="movies__container__right__list">

@@ -12,7 +12,7 @@ import Review from "../../Review/Review";
 import ListSimilar from "../../List/ListSimilar";
 const Detail = (props) => {
   const { cate, id } = useParams(); // lấy param theo bên routes /home/:cate/:id
-  const [detail, Setdetail] = useState([]);
+  const [detail, Setdetail] = useState({});
   const [status, setStatus] = useState(false);
   useEffect(() => {
     const getItem = async () => {
@@ -31,10 +31,16 @@ const Detail = (props) => {
       }
     }
   };
-  var poster = apiConfig.originalImage(
-    detail.poster_path || detail.backdrop_path
-  );
-  var bg = apiConfig.originalImage(detail.backdrop_path || detail.poster_path);
+  if(typeof detail.backdrop_path=='string'){
+    var poster = apiConfig.originalImage(
+      detail.poster_path || detail.backdrop_path
+    );
+    var bg = apiConfig.originalImage(detail.backdrop_path || detail.poster_path);
+  }
+  else{
+    poster='';
+    bg='';
+  }
   const getStatus = (status) => {
     var temp = !status;
     setStatus(temp);
