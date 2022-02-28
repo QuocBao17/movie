@@ -14,3 +14,13 @@
         @content;
     }
 }
+@mixin  fullsize-4k {
+    @media only screen and (min-width:2000px) {
+        @content;
+    }
+}
+@mixin  fullsize {
+    @media only screen and (min-width:1500px)and (max-width:2000px) {
+        @content;
+    }
+}

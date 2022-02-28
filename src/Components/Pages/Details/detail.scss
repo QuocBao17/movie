@@ -1,6 +1,5 @@
 @use './../../Scss/'as *;
 .container__detail{
-
     background-color: $bg-color;
     color: $txt-color-2;
     display: flex;
@@ -29,6 +28,7 @@
             @include mobile{
                height: 400px;
             }
+          
             &::after{
                 content: '';
                 border-radius: 20px;
@@ -65,6 +65,7 @@
                          }
                         font-size: 50px;
                         margin: 30px 0;
+                        font-weight: bolder;
                     }
                 }
                 .rate{
@@ -72,6 +73,7 @@
                     @include flex(unset,unset);
                     text-align: center;
                     p{
+                        font-weight: bolder;
                         margin: 0;
                         @include laptop{
                             font-size: 14px;
@@ -154,6 +156,9 @@
                 img{
                     cursor: pointer;
                     width: 70%;
+                    @include fullsize-4k{
+                        width: 52%;
+                    }
                     border-radius: 20px;
                 }
                 width: 50%;

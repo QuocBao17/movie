@@ -24,7 +24,7 @@ const ListSimilar = (props) => {
     <div className="a">
       <h1>{`Similar ${cate}`}</h1>
       <div className="list">
-        <div className="list__container">
+        <div className="list__container-similar">
           <Swiper
             breakpoints={{
               320: {
